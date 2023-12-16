@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{>header}}
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/register.css" />
+  </head>
+  <body>
+
+    <div class="main_body">
+      <div class="detail_body">
+        <h2>Registration</h2>
+        <hr id="regline" />
+        <form action="/register" method="POST">
+        <table>
+          <tr>
+            <td>
+              <label for="fullname">Full Name</label><br /><input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Enter your name"
+                required
+              />
+            </td>
+            <td>
+              <label for="username">User Name</label><br /><input
+                type="text"
+                id="username"
+                name="Username"
+                placeholder="Enter your username"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="Email">E-mail</label><br /><input
+                type="email"
+                id="Email"
+                name="Email"
+                placeholder="Enter your email"
+                required
+              />
+            </td>
+            <td>
+              <label for="phonenumber">Phone number</label><br /><input
+                type="tel"
+                id="phonenumber"
+                name="phonenumber"
+                placeholder="Enter your phone number"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="password">Password</label><br /><input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+              />
+            </td>
+            <td>
+              <label for="c_password">Confirm Password</label><br /><input
+                type="password"
+                id="c_password"
+                name="c_password"
+                placeholder="Confirm your password"
+                required
+              />
+            </td>
+          </tr>
+        </table>
+        <div id="genderdiv">
+          <label for="Gender" name="gender" id="gender">Gender</label><br />
+          <input type="radio" id="male" name="gender" value="MALE" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="FEMALE" />
+          <label for="female">Female</label>
+          <input
+            type="radio"
+            id="Prefer not to say"
+            name="gender"
+            value="Prefer not to say"
+          />
+          <label for="Prefer not to say">Prefer not to say</label>
+        </div>
+        <a href="/login"><p id="loginpage">already have an account?</p></a>
+        <input type="submit" value="Register" id="register" name="register"/>
+      </form>
+      </div>
+    </div>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
